@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My App: ToDo List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/928599f9b9.js" crossorigin="anonymous"></script>
+<script defer src="main.js"></script></head>
+<body>
+    <section class="main-section">
+        <form action="submit" class="form">
+            <div class="header">
+                <h1>Today's To Do</h1>
+                <i id="spin" class="fa fa-refresh"></i>
+            </div>
+            <div class="data-Input">
+                <input id="todo-input"  type="text" placeholder="Add to your list..." >
+                <i class="fas fa-long-arrow-alt-left"></i>
+            </div>
+            <ul class="todo-list"></ul>
+        </form>
+        <div class="clear">
+            <button type="submit" class="clearbtn">Clear all completed</button>
+        </div>
+    </section>
+</body>
+</html>
