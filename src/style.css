@@ -1,13 +1,14 @@
 *,
 *::before,
-*::after { 
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  background: #f4f2f2;
+  background: #f8f2f2;
+  margin-top: 25vh;
 }
 
 .form {
@@ -45,7 +46,7 @@ h1 {
   width: 100%;
 }
 
-.dataInput {
+.data-Input {
   display: flex;
   padding: 1% 3%;
   border-bottom: 1px solid #dedbd2;
