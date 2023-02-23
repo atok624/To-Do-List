@@ -1,14 +1,34 @@
-import _ from 'lodash';
-import './style.css';
+import "./style.css";
 
-function component() {
-  const element = document.createElement("div");
+const toDos = [
+  {
+    description: "Task 1",
+    completed: false,
+    index: 1,
+  },
+  {
+    description: "Task 2",
+    completed: false,
+    index: 2,
+  },
+  {
+    description: "Task 3",
+    completed: false,
+    index: 3,
+  },
+];
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(["Hello", "webpack"], " ");
-  element.classList.add('hello');
-
-  return element;
-}
-
-document.body.appendChild(component());
+const list = document.querySelector(".todo");
+window.addEventListener("DOMContentLoaded", () => {
+  const listString = toDos
+    .map(
+      (task) => `<li class="task">
+<div class="item">
+  <input type="checkbox">
+  <p>${task.description}</p>
+</div>
+<i class="fa-solid fa-ellipsis-vertical"></i> </li>`
+    )
+    .join("");
+  list.innerHTML = listString;
+});
