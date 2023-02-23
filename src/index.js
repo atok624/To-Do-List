@@ -20,15 +20,14 @@ const toDos = [
 
 const list = document.querySelector('.todo-list');
 window.addEventListener('DOMContentLoaded', () => {
-  const listString = toDos
-    .map(
-      (task) => `<li class="task">
+  const listString = toDos.map(
+    (task) => `<li class="task">
 <div class="item">
   <input type="checkbox">
   <p>${task.description}</p>
 </div>
 <i class="fa-solid fa-ellipsis-vertical"></i> </li>`,
-    )
+  )
     .join('');
   list.innerHTML = listString;
 });
