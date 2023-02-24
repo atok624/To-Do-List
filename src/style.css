@@ -206,6 +206,10 @@ li.dragging {
   font-size: 15px;
 }
 
+#clearCompleted:hover {
+  background-color: #808080;
+}
+
 .disable {
   display: none;
 }
