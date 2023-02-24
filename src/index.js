@@ -1,8 +1,9 @@
 import './style.css';
-import { saveTasks, loadTasks } from '../modules/storage.js';
+import { saveTasks, loadTasks } from './modules/storage.js';
 
 const taskList = document.getElementById('taskList');
 const newTaskForm = document.getElementById('newTaskForm');
+const clearCompletedButton = document.getElementById('clearCompleted');
 let tasks = [];
 
 const updateIndex = () => {
@@ -92,6 +93,12 @@ const addTask = (name) => {
   renderTaskList();
 };
 
+const clearCompletedTasks = () => {
+  tasks = tasks.filter((task) => !task.completed);
+  saveTasks(tasks);
+  renderTaskList();
+};
+
 const handleDragStart = (event) => {
   event.target.classList.add('dragging');
 };
@@ -130,6 +137,10 @@ newTaskForm.addEventListener('submit', (event) => {
     newTaskInput.value = '';
     newTaskInput.focus();
   }
+});
+
+clearCompletedButton.addEventListener('click', () => {
+  clearCompletedTasks();
 });
 
 taskList.addEventListener('dragstart', handleDragStart);

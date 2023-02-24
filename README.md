@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3><b>Microverse README Template</b></h3>
+  <h3><b>TO-DO-LIST</b></h3>
 
 </div>
 
@@ -126,7 +126,6 @@ If you like this project, please give it a star on the main page
 
 I would like to thank the following :
 
--   [Basim Aljazaeri](https://github.com/ShiroYaksha90)
 -   [ ] Microverse
 -   [ ] All the Patners I've had for Module.
 
