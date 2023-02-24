@@ -47,6 +47,9 @@
 -   **Add task**
 -   **Remove task**
 
+### Future Features <a name="key-features"></a>
+- **Functional clear button**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
