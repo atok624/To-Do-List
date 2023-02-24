@@ -40,6 +40,6 @@ module.exports = {
       directory: path.resolve(__dirname, 'src'),
     },
     compress: true,
-    port: 8080,
+    port: 5050,
   },
 };
