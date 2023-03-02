@@ -42,10 +42,8 @@ const renderTaskList = () => {
     taskDeleteButton.type = 'button';
     taskDeleteButton.innerHTML = '<i class="fa-solid fa-ellipsis-vertical"></i>';
     taskDeleteButton.addEventListener('click', () => {
-      tasks.splice(index, 1);
-      updateIndex();
-      saveTasks(tasks);
-      renderTaskList();
+      // eslint-disable-next-line no-use-before-define
+      deleteTask(index);
     });
     const taskeditButton = document.createElement('button');
     taskeditButton.type = 'button';
@@ -84,6 +82,13 @@ const renderTaskList = () => {
 
     taskList.appendChild(taskElement);
   });
+};
+
+const deleteTask = (index) => {
+  tasks.splice(index, 1);
+  updateIndex();
+  saveTasks(tasks);
+  renderTaskList();
 };
 
 const addTask = (name) => {
@@ -149,3 +154,4 @@ taskList.addEventListener('dragend', handleDragEnd);
 
 tasks = loadTasks();
 renderTaskList();
+export { addTask, deleteTask };
